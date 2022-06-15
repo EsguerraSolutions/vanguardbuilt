@@ -35,10 +35,10 @@ function addObserver(el, options){
 }
 
 scrollTrigger('.project-tile',{
-    rootMargin: '-200px',
+    rootMargin: '-100px',
 });
 
 
 scrollTrigger('.project-header',{
-    rootMargin: '-200px',
+    rootMargin: '-100px',
 });
