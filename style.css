@@ -217,12 +217,8 @@ h4 {
   width: 90%;
 }
 
-.others-name {
-  font-size: 0.8rem;
-}
-
 #other-projects-list > .project-tile {
-  max-width: 250px;
+  max-width: 300px;
   margin: 1rem;
 }
 
