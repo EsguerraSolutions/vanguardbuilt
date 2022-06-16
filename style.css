@@ -215,6 +215,7 @@ h4 {
   justify-content: center;
   flex-wrap: wrap;
   width: 90%;
+  max-width: 750px;
 }
 
 #other-projects-list > .project-tile {
@@ -372,11 +373,6 @@ h4 {
   #welcome-section p {
     font-size: 1.2rem;
     margin: 0.1rem;
-  }
-
-  
-  #other-projects-list {
-    max-width: 750px;
   }
 }
 
