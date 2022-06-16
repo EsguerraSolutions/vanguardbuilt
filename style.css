@@ -340,6 +340,11 @@ h4 {
   color: var(--main-dark-blue);
 }
 
+
+#profile-link:hover {
+  color: var(--main-lighter-blue);
+}
+
 #certificate-list {
   max-width: 700px;
   padding: 0;
