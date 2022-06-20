@@ -336,13 +336,13 @@ h4 {
   text-decoration: none;
 }
 
-#profile-link {
+.profile-link {
   text-decoration: none;
   color: var(--main-dark-blue);
 }
 
 
-#profile-link:hover {
+.profile-link:hover {
   color: var(--main-blue);
 }
 
