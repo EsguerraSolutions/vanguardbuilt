@@ -344,6 +344,7 @@ h4 {
 
 .profile-link:hover {
   color: var(--main-blue);
+  text-decoration: none;
 }
 
 #certificate-list {
