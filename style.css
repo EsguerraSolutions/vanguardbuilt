@@ -1,10 +1,14 @@
 /* Custom properties/variables  */
 :root {
-  --main-blue: #5495DF;
-  --main-light-blue: #3589E9;
-  --main-dark-blue: #0D2949;
-  --main-orange: #FEAD6F;
-  --main-lighter-blue: #96C7FF;
+  --main-blue: #5495df;
+  --main-light-blue: #3589e9;
+  --main-dark-blue: #0d2949;
+  --main-orange: #fead6f;
+  --main-lighter-blue: #96c7ff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -19,7 +23,6 @@ body {
   text-align: center;
 }
 
-
 /*HEADER AND NAVBAR*/
 #navbar {
   position: fixed;
@@ -32,7 +35,6 @@ body {
   width: 100%;
   z-index: 3;
 }
-
 
 #nav-list {
   display: flex;
@@ -53,23 +55,32 @@ body {
   color: var(--main-lighter-blue);
 }
 
-
 /*WELCOME PAGE*/
 
 #welcome-section {
-   background-image: url("https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1826&q=80");
+  background-image: url("./img/background/philipp-henzler-dgE3lWVyDh8-unsplash.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   position: relative;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+}
+
+#welcome-section > .company-logo-container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.company-logo {
+  width: 100%;
+  filter: drop-shadow(1px 1px 2px rgba(255, 255, 255));
 }
 
 #welcome-section::after {
@@ -80,7 +91,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 #welcome-section * {
@@ -89,24 +100,27 @@ body {
 }
 
 #welcome-section h1 {
-  font-size: 10rem;
+  font-size: 3rem;
   font-weight: bold;
-  text-shadow: 4px 3px 0px var(--main-dark-blue), 9px 8px 0px rgba(0,0,0,0.15);
+  text-shadow: 4px 3px 0px var(--main-dark-blue),
+    9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 #welcome-section h2 {
-  font-size: 3.0rem;
-  text-shadow: 4px 3px 0px var(--main-dark-blue), 9px 8px 0px rgba(0,0,0,0.15);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 4px 3px 0px var(--main-dark-blue),
+    9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 #welcome-section p {
   font-size: 1.5rem;
-  text-shadow: 4px 3px 0px var(--main-dark-blue), 9px 8px 0px rgba(0,0,0,0.15);
+  text-shadow: 4px 3px 0px var(--main-dark-blue),
+    9px 8px 0px rgba(0, 0, 0, 0.15);
   margin: 0.2rem;
 }
- 
 
-/*TECH STACKS LIST*/
+/*ABOUT US SECTION*/
 
 #about-me {
   padding: 1.5rem;
@@ -118,54 +132,34 @@ h3 {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  text-shadow: 2px 3px 0px white, 4px 5px 0px rgba(0,0,0,0.15);
-  margin: 1.0rem;
+  text-shadow: 2px 3px 0px white, 4px 5px 0px rgba(0, 0, 0, 0.15);
+  margin: 1rem;
 }
 
 h4 {
-  font-size: 1.5rem;
-  margin: 1.0rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto 0rem auto;
 }
 
-#tech-stacks {
-  background-color: var(--main-lighter-blue);
-  padding: 0.1rem;
-  margin: 2.0rem auto 0rem auto;
-  max-width: 900px;
-  width: 95%;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  border-radius: 20px;
-}
+/*SERVICES SECTION*/
 
-.tech-list-header {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin: 0px;
-}
-
-.tech-stacks-list {
-  margin: 30px auto;
-}
-
-.tech-layer {
-  margin: 10px;
+#services-list {
+  margin: auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1000px;
 }
 
-.ts-icon {
-  height: 60px;
-  margin: 10px;
-  margin-bottom: 0px;
-  filter: drop-shadow(0px 0px 1.0px #5d5d5d);
-  transition: all .2s ease-in-out;
-}
-
-.ts-icon:hover {
-  filter: drop-shadow(0px 0px 5.0px #5c44f9);
-  transform: scale(110%);
+#services-list > .project-tile {
+  max-width: 300px;
+  margin: 1rem;
 }
 
 /*PROJECT SECTION*/
@@ -181,15 +175,16 @@ h4 {
   background-color: var(--main-dark-blue);
   max-width: 700px;
   width: 90%;
-  margin: 2.0rem auto;
+  margin: 2rem auto;
   padding: 0;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   color: white;
-
 }
 
 .project-header > h4 {
-    font-size: 1.0rem;
+  font-size: 1rem;
 }
 
 .project-tile > a {
@@ -202,11 +197,11 @@ h4 {
   font-size: 1.2rem;
 }
 
-.project-thumbnail, .project-live {
+.project-thumbnail,
+.project-live {
   width: 100%;
   height: auto;
 }
-
 
 #other-projects-list {
   display: flex;
@@ -236,7 +231,6 @@ h4 {
   opacity: 1;
 }
 
-
 .scaledIn {
   transition: transform 0.5s, opacity 0.5s;
   transform: scale(0);
@@ -256,7 +250,9 @@ h4 {
 .project-card.hover .flipper {
   transform: rotateY(180deg);
 }
-.project-card, .project-thumbnail-c, .project-live-c {
+.project-card,
+.project-thumbnail-c,
+.project-live-c {
   width: 100%;
   height: auto;
 }
@@ -265,7 +261,8 @@ h4 {
   transform-style: preserve-3d;
   position: relative;
 }
-.project-thumbnail-c, .project-live-c {
+.project-thumbnail-c,
+.project-live-c {
   backface-visibility: hidden;
   top: 0;
   left: 0;
@@ -292,7 +289,7 @@ h4 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  filter: drop-shadow(0px 0px 1.0px #ffffff);
+  filter: drop-shadow(0px 0px 1px #ffffff);
   margin: 20px;
   align-items: center;
   justify-content: center;
@@ -314,7 +311,7 @@ h4 {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 3.0rem 1.5rem 3rem;
+  margin: 3rem 1.5rem 3rem;
 }
 
 #contact-list {
@@ -323,7 +320,7 @@ h4 {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  font-size : 1.1rem;
+  font-size: 1.1rem;
   margin: 0;
 }
 
@@ -341,34 +338,27 @@ h4 {
   color: var(--main-dark-blue);
 }
 
-
 .profile-link:hover {
   color: var(--main-blue);
   text-decoration: none;
 }
 
-#certificate-list {
-  max-width: 700px;
-  padding: 0;
-  width: 100%;
-}
-
-.carousel-control-next, .carousel-control-prev , .carousel-indicators {
-    filter: invert(100%);
-}
-
 /*FOR MOBILE DEVICES*/
 @media screen and (max-width: 768px) {
+  .nav-link {
+    padding: 0.3rem;
+  }
+
   .nav-link > a {
     font-size: 1.2rem;
   }
 
   #welcome-section h1 {
-    font-size: 7.0rem;
+    font-size: 2.2rem;
   }
 
   #welcome-section h2 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 
   #welcome-section p {
